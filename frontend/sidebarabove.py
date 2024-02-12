@@ -9,7 +9,7 @@ import flet as ft
 #################################################
 
 
-def main(page: ft.Page):
+def sidebarabove(page: ft.Page):
     page.title = "Images Example"
     page.theme_mode = ft.ThemeMode.LIGHT
     page.padding = 50
@@ -28,7 +28,7 @@ def main(page: ft.Page):
     for i in range(0, 30):
         images.controls.append(
             ft.Image(
-                src=f"logo.png",
+                src=f"src/logo.png",
                 width=200,
                 height=200,
                 fit=ft.ImageFit.NONE,
@@ -37,5 +37,3 @@ def main(page: ft.Page):
             )
         )
     page.update()
-
-    ft.app(target=main)

@@ -4,11 +4,11 @@
 #                     SBR                       #
 #################################################
 import flet as ft
-import sidebarabove
+from frontend.sidebarabove import sidebarabove
 #################################################
 
 
-def main(page):
+def main(page: ft.Page):
     first_name = ft.Ref[ft.TextField]()
     last_name = ft.Ref[ft.TextField]()
     greetings = ft.Ref[ft.Column]()
@@ -27,6 +27,5 @@ def main(page):
         ft.TextField(ref=last_name, label="Last name"),
         ft.ElevatedButton("Say hello!", on_click=btn_click),
         ft.Column(ref=greetings),
-        #ft.Container(content=sidebarabove)
+        ft.Container(content=sidebarabove(page))
     )
-    ft.app(target=main)
